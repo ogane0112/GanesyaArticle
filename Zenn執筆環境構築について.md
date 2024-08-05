@@ -5,9 +5,15 @@
 - Qiitaにも同時に投稿！
 以上二つです！
 ## Git管理の仕方について
-公式で紹介されているので割愛します
-## Qiitaへの同時投稿機能の実装
 
+<img src="image.png" width = 50% >
+
+1.記事の管理をクリック
+![alt text](image-1.png)
+2.githubとの連携をクリック
+
+## Qiitaへの同時投稿機能の実装
+GithubActionsを利用して作成しました。
 
 ## noteへの同時投稿機能の実装について
 
