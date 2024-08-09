@@ -25,7 +25,8 @@ marp: true
 #  システム構成について
 ---
 # 概略図
-面倒なのでなし
+![meijo-cup-result](https://github.com/user-attachments/assets/bbde8875-e57d-4469-b131-9e525f5f67a4)
+
 ---
 ---
 # フォルダー構成
