@@ -41,6 +41,11 @@ https://ultimatevocalremover.com/
 ![alt text](image-5.png)
 > クリックするとEXEファイルがダウンロードされるので実行してください
 
+![alt text](image-6.png)
+もろもろダウンロードが終了して正常にインストール完了できていれば
+上記画像のような画面になるはずです！
+
+
 
 下のURLから学習データ作成用のGoogle Colabへ移動してください  
 [学習データ作成用](https://colab.research.google.com/drive/1GDpyoj5996r4TwaYg1ClAiTR3lCW1B7-?usp=sharing)  
