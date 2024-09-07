@@ -1,0 +1,15 @@
+{
+  "name": "ganesyaarticle",
+  "version": "1.0.0",
+  "description": "このリポジトリは私のZennとQiita記事を管理するための物です。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zenn-cli": "^0.1.155"
+  }
+}
