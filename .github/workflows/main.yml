@@ -1,0 +1,49 @@
+name: Publish articles
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish_articles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.16.0"
+
+      - name: Install qiita-cli
+        run: npm install -g @qiita/qiita-cli@v1.5.0
+        shell: bash
+
+      - name: Publish articles
+        run: qiita publish --all --root .
+        env:
+          QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+        shell: bash
+
+      - name: Commit and push diff
+        run: |
+          git add ./articles/*
+          if ! git diff --staged --exit-code --quiet; then
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Updated by qiita-cli'
+            git push
+          fi
+        shell: bash
